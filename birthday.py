@@ -35,3 +35,29 @@ from datetime import datetime
 from calendar import month_name
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
+name = str(input("Hello, what is your name? "))
+month = str(input("Hi {0}, what was the name of the month you were born in? ".format(name)))
+year = float(input("And what year were you born in, {0}? ".format(name)))
+day = float(input("And the day? "))
+winterm = ['December', 'January', 'February']
+springm = ['March', 'April', 'May']
+summerm = ['June', 'July', 'August']
+fallm = ['September', 'October', 'November']
+if month == "October"
+    if day == 31
+        exc = halloween
+    #else
+        #exc = none
+#else
+    #exc = none
+if month == todaymonth
+    if day == todaydate
+        exc = birthday
+    #else
+        #exc = none
+#else
+    #exc = none
+
+#which month?
+if month == winterm
+    print("1")

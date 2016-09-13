@@ -43,15 +43,15 @@ winterm = ['December', 'January', 'February']
 springm = ['March', 'April', 'May']
 summerm = ['June', 'July', 'August']
 fallm = ['September', 'October', 'November']
-if month == "October"
-    if day == 31
+if month == "October":
+    if day == 31:
         exc = halloween
     #else
         #exc = none
 #else
     #exc = none
-if month == todaymonth
-    if day == todaydate
+if month == todaymonth:
+    if day == todaydate:
         exc = birthday
     #else
         #exc = none
@@ -59,5 +59,5 @@ if month == todaymonth
     #exc = none
 
 #which month?
-if month == winterm
+if month == winterm:
     print("1")

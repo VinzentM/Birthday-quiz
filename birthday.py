@@ -1,6 +1,6 @@
 """
 birthday.py
-Author: <your name here>
+Author: Vinzent
 Credit: <list sources used, if any>
 Assignment:
 
@@ -36,28 +36,64 @@ from calendar import month_name
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
 name = str(input("Hello, what is your name? "))
-month = str(input("Hi {0}, what was the name of the month you were born in? ".format(name)))
+month = input("Hi {0}, what was the name of the month you were born in? ".format(name))
+if month == "January":
+    monthn = 1
+if month == "February":
+    monthn = 2
+if month == "March":
+    monthn = 3
+if month == "April":
+    monthn = 4
+if month == "May":
+    monthn = 5
+if month == "June":
+    monthn = 6
+if month == "July":
+    monthn = 7
+if month == "August":
+    monthn = 8
+if month == "September":
+    monthn = 9
+if month == "October":
+    monthn = 10
+if month == "November":
+    monthn = 11
+if month == "December":
+    monthn = 12
+
 year = float(input("And what year were you born in, {0}? ".format(name)))
 day = float(input("And the day? "))
-winterm = ['December', 'January', 'February']
-springm = ['March', 'April', 'May']
-summerm = ['June', 'July', 'August']
-fallm = ['September', 'October', 'November']
-if month == "October":
-    if day == 31:
-        exc = halloween
-    #else
-        #exc = none
-#else
-    #exc = none
-if month == todaymonth:
-    if day == todaydate:
-        exc = birthday
-    #else
-        #exc = none
-#else
-    #exc = none
+if monthn in (12,1,2):
+    t = "winterm"
+if monthn in (3,4,5):
+    t = "springm"
+if monthn in (6,7,8):
+    t = "summerm"
+if monthn in (9,10,11):
+    t = "fallm"
+if month == "October" and day == 31:
+        exc = 1
+        print("You were born on Halloween!")
+if monthn == todaymonth and day == todaydate:
+    print("Happy birthday!")
 
-#which month?
-if month == winterm:
-    print("1")
+if t == "winterm":
+    mn = "winter baby"
+if t == "springm":
+    mn = "spring baby"
+if t == "summerm":
+    mn = "summer baby"
+if t == "fallm":
+    mn = "fall baby"
+    
+if year > 2000:
+    yt = "two thousands"
+if year <= 1999:
+    yt = "nineties"
+if year <= 1989:
+    yt = "eighties"
+if year < 1980:
+    yt = "Stone age"
+
+print("{0}, you are a {1} of the {2}.".format(name, mn, yt))

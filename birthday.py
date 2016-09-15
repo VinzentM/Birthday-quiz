@@ -61,7 +61,8 @@ if month == "November":
     monthn = 11
 if month == "December":
     monthn = 12
-
+yt = "fill"
+mn = "fill"
 year = float(input("And what year were you born in, {0}? ".format(name)))
 day = float(input("And the day? "))
 if monthn in (12,1,2):
@@ -72,11 +73,15 @@ if monthn in (6,7,8):
     t = "summerm"
 if monthn in (9,10,11):
     t = "fallm"
+exc = 0
 if month == "October" and day == 31:
-        exc = 1
-        print("You were born on Halloween!")
+    exc = 1
+#    print("You were born on Halloween!")
 if monthn == todaymonth and day == todaydate:
-    print("Happy birthday!")
+#    print("Happy birthday!")
+    exc = 2
+#else:
+#    exc = 0
 
 if t == "winterm":
     mn = "winter baby"
@@ -95,5 +100,10 @@ if year <= 1989:
     yt = "eighties"
 if year < 1980:
     yt = "Stone age"
-
-print("{0}, you are a {1} of the {2}.".format(name, mn, yt))
+    
+if exc == 0:
+    print("{0}, you are a {1} of the {2}.".format(name, mn, yt))
+elif exc == 1:
+    print("You were born on Halloween!")
+elif exc == 2:
+    print("Happy birthday!")
